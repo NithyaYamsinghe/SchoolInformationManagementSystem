@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--School Information management System - OOP Project SQL queries -->
+<Querys>
+
+	<!-- Create table student Query -->
+	<query id="create_student_table">
+        <![CDATA[
+            CREATE TABLE student(
+				studentID varchar(10) not null,
+				studentName varchar(50),
+				dateOfAdmission varchar(15),
+			address varchar(50),
+   dateOfBirth varchar(15),
+				guardianName  varchar(50),
+				stream varchar(20),
+				grade varchar(10) ,
+		division varchar(10),   age int(11),       gender varchar(10),	email varchar(50),	primary key (studentID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE Student Query -->
+	<query id="drop_table_student">
+         <![CDATA[        
+            DROP TABLE IF EXISTS student 
+        ]]>
+	</query>
+
+	<!-- Select all Student Query -->
+	<query id="insert_students">
+        <![CDATA[
+          	insert into student (studentID, studentName, dateOfAdmission, address, dateOfBirth, guardianName, stream,grade,division,age, gender, email) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?)
+        ]]>
+	</query>
+
+	<!-- Select a particular student by id Query -->
+	<query id="student_by_id">
+         <![CDATA[        
+            select * from student where student.studentID = ?
+        ]]>
+	</query>
+
+	<!-- Select all students -->
+	<query id="all_students">
+         <![CDATA[        
+            select * from student       ]]>
+	</query>
+
+	<!-- Delete a particular student by id Query -->
+	<query id="remove_student">
+         <![CDATA[        
+            delete from student where student.studentID = ?
+        ]]>
+	</query>
+
+	<!-- Update a particular student by id Query -->
+	<query id="update_student">
+         <![CDATA[        
+            update student as s 
+            set s.studentName = ?, s.dateOfAdmission = ?, s.address = ?, s.dateOfBirth = ?, s.guardianName = ?, s.stream = ?, s.grade = ? , s.division= ?, s.age= ?, s.gender=?, s.email=?
+            where s.studentID = ?
+        ]]>
+	</query>
+
+	<!-- Get student IDs Query -->
+	<query id="student_ids">
+         <![CDATA[        
+            select s.studentID from student as s      ]]>
+	</query>
+
+
+
+	<!-- Select all contact us details Query -->
+	<query id="insert_contactus">
+        <![CDATA[
+          	insert into contactus (contactusID, name, email, phoneNumber, message) 
+          	values (?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular contact us details by id Query -->
+	<query id="contactus_by_id">
+         <![CDATA[        
+            select * from contactus where contactus.contactusID = ?
+        ]]>
+	</query>
+
+	<!-- Select all contact us details -->
+	<query id="all_contactus">
+         <![CDATA[        
+            select * from contactus        ]]>
+	</query>
+
+
+
+
+	<!-- Get contact us IDs Query -->
+	<query id="contactus_ids">
+         <![CDATA[        
+            select c.contactusID from contactus as c
+        ]]>
+	</query>
+
+
+	<!-- Select all join details Query -->
+	<query id="insert_join">
+        <![CDATA[
+          	insert into aptitudereg (joinID, name, birthDate, gender, email, phoneNumber, address, city) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular join details by id Query -->
+	<query id="join_by_id">
+         <![CDATA[        
+            select * from aptitudereg where aptitudereg.joinID = ?
+        ]]>
+	</query>
+
+	<!-- Select all join details -->
+	<query id="all_join">
+         <![CDATA[        
+            select * from aptitudereg        ]]>
+	</query>
+
+
+
+
+	<!-- Get join IDs Query -->
+	<query id="join_ids">
+         <![CDATA[        
+            select a.joinID from aptitudereg as a
+        ]]>
+	</query>
+
+	<!-- Create table teacher Query -->
+	<query id="create_teacher_table">
+        <![CDATA[
+            CREATE TABLE teacher(
+				teacherID varchar(10) not null,
+				teacherName varchar(50),
+				dateOfRegistration varchar(15),
+			address varchar(50),
+   dateOfBirth varchar(15),
+				specialization  varchar(50),
+				qualification varchar(100),
+				department varchar(50) ,
+	telephoneNo varchar(20),   age int(11),       gender varchar(10),	email varchar(50),	primary key (teacherID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE teacher Query -->
+	<query id="drop_table_teacher">
+         <![CDATA[        
+            DROP TABLE IF EXISTS teacher 
+        ]]>
+	</query>
+
+	<!-- Select all teacher Query -->
+	<query id="insert_teachers">
+        <![CDATA[
+          	insert into teacher (teacherID, teacherName, dateOfRegistration, address, dateOfBirth, specialization, qualification ,department,telephoneNo,age, gender, email) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?)
+        ]]>
+	</query>
+
+	<!-- Select a particular teacher by id Query -->
+	<query id="teacher_by_id">
+         <![CDATA[        
+            select * from teacher where teacher.teacherID = ?
+        ]]>
+	</query>
+
+	<!-- Select all teachers -->
+	<query id="all_teachers">
+         <![CDATA[        
+            select * from teacher       ]]>
+	</query>
+
+	<!-- Delete a particular teacher by id Query -->
+	<query id="remove_teacher">
+         <![CDATA[        
+            delete from teacher where teacher.teacherID = ?
+        ]]>
+	</query>
+
+	<!-- Update a particular teacher by id Query -->
+	<query id="update_teacher">
+         <![CDATA[        
+            update teacher as t 
+            set t.teacherName = ?, t.dateOfRegistration = ?, t.address = ?, t.dateOfBirth = ?, t.specialization = ?, t.qualification = ?, t.department = ? , t.telephoneNo= ?, t.age= ?, t.gender=?, t.email=?
+            where t.teacherID = ?
+        ]]>
+	</query>
+
+	<!-- Get teacher IDs Query -->
+	<query id="teacher_ids">
+         <![CDATA[        
+            select t.teacherID from teacher as t      ]]>
+	</query>
+
+
+
+
+
+
+	<!-- Create table subject Query -->
+	<query id="create_subject_table">
+        <![CDATA[
+            CREATE TABLE subject(
+				subjectID varchar(10) not null,
+				subjectName varchar(50),
+				teacherID varchar(15),
+				teacherName varchar(50),
+   				credits varchar(10),
+				deliveringGrade  varchar(10),
+				department varchar(50) ,
+				primary key (subjectID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE subject Query -->
+	<query id="drop_table_subject">
+         <![CDATA[        
+            DROP TABLE IF EXISTS subject 
+        ]]>
+	</query>
+
+	<!-- Select all subject Query -->
+	<query id="insert_subjects">
+        <![CDATA[
+          	insert into subject (subjectID, subjectName, teacherID, teacherName, credits, deliveringGrade, department) 
+          	values (?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular subject by id Query -->
+	<query id="subject_by_id">
+         <![CDATA[        
+            select * from subject where subject.subjectID = ?
+        ]]>
+	</query>
+
+	<!-- Select all subjects -->
+	<query id="all_subjects">
+         <![CDATA[        
+            select * from subject       ]]>
+	</query>
+
+	<!-- Delete a particular subject by id Query -->
+	<query id="remove_subject">
+         <![CDATA[        
+            delete from subject where subject.subjectID = ?
+        ]]>
+	</query>
+
+	<!-- Update a particular subject by id Query -->
+	<query id="update_subject">
+         <![CDATA[        
+            update subject as s 
+            set s.subjectName = ?, s.teacherID = ?, s.teacherName = ?, s.credits = ?, s.deliveringGrade = ?, s.department = ?
+            where s.subjectID = ?
+        ]]>
+	</query>
+
+	<!-- Get subject IDs Query -->
+	<query id="subject_ids">
+         <![CDATA[        
+            select s.subjectID from subject as s      ]]>
+	</query>
+
+	<!-- Check studentID available Query -->
+	<query id="id_available">
+         <![CDATA[        
+            select s.studentID from student as s where s.studentID = ?      ]]>
+	</query>
+
+	<!-- Insert administrator Query -->
+	<query id="insert_admin">
+         <![CDATA[        
+               insert into admin (adminUserName, email, password, ConfirmPassword) 
+          	values (?, ?, ?, ?)  ]]>
+	</query>
+
+
+	<!-- Get administrator by user name Query -->
+	<query id="admin_by_username">
+         <![CDATA[        
+               select * from  admin where adminUserName = ?
+           ]]>
+	</query>
+
+
+	<!-- Validate administrator user name and password Query -->
+	<query id="validate_admin">
+         <![CDATA[        
+               select a.adminUserName, a.password from admin as a where a.adminUserName = ?  AND a.password = ?
+           ]]>
+	</query>
+
+
+	<!-- Delete a particular administrator by user name Query -->
+	<query id="remove_admin">
+         <![CDATA[        
+            delete from admin where admin.adminUserName = ?
+        ]]>
+	</query>
+
+
+	<!-- Update a particular administrator user name Query -->
+	<query id="update_admin">
+         <![CDATA[        
+            update admin as a 
+            set a.email = ?, a.password = ?, a.confirmPassword = ?
+            where a.adminUserName = ?
+        ]]>
+	</query>
+
+
+
+	<!-- Check administrator user name already available Query -->
+	<query id="username_available">
+         <![CDATA[        
+            select a.adminUserName from admin as a where a.adminUserName = ?      ]]>
+	</query>
+
+	<!-- Check subject id already available Query -->
+	<query id="subjectid_available">
+         <![CDATA[        
+            select s.subjectID from subject as s where s.subjectID = ?      ]]>
+	</query>
+
+	<!-- Check teacher id already available Query -->
+	<query id="teacherid_available">
+         <![CDATA[        
+            select t.teacherID from teacher as t where t.teacherID = ?      ]]>
+	</query>
+
+
+
+
+
+	<!-- Student Mark Handling -->
+
+	<!-- Create table mark Query -->
+	<query id="create_stdMark_table">
+        <![CDATA[
+            CREATE TABLE stdMark(
+				markID VARCHAR(10) not null,
+				stdID VARCHAR(10) not null,
+				examName VARCHAR(50),
+				year int,
+				subjectName VARCHAR(50),
+				marks DOUBLE,
+				grade VARCHAR(20),
+				remark VARCHAR(20),
+				passFail VARCHAR(20),
+				primary key (markID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE Marks Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS stdMark 
+        ]]>
+	</query>
+
+	<!-- Select all marks Query -->
+	<query id="insert_stdMark">
+        <![CDATA[
+          	insert into stdMark (markID, stdID, examName, year, subjectName, marks, grade, remark,passFail) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?,?)
+        ]]>
+	</query>
+
+	<!-- Select a particular mark by id Query -->
+	<query id="stdMark_by_id">
+         <![CDATA[        
+            select * from stdMark where stdMark.markID = ?
+        ]]>
+	</query>
+
+	<!-- Select all the records of given student id Query -->
+	<query id="stdAllMark_by_id">
+         <![CDATA[        
+            select * from stdMark where stdMark.stdID = ?
+        ]]>
+	</query>
+
+	<!-- Select all marks -->
+	<query id="all_stdMark">
+         <![CDATA[        
+            select * from stdMark
+        ]]>
+	</query>
+
+	<!-- Delete a particular mark by id Query -->
+	<query id="remove_stdMark">
+         <![CDATA[        
+            delete from stdMark where stdMark.markID = ?
+        ]]>
+	</query>
+
+	<!-- Update a particular mark by id Query -->
+	<query id="update_stdMark">
+         <![CDATA[        
+            update stdMark as m 
+            set m.stdID = ?, m.examName = ?, m.year = ?, m.subjectName = ?, m.marks = ?,m.grade = ?,m.remark = ?,m.passFail = ?
+            where m.markID = ?
+            
+        ]]>
+	</query>
+
+	<!-- Get mark IDs Query -->
+	<query id="stdMark_ids">
+         <![CDATA[        
+            select m.markID from stdMark as m
+        ]]>
+	</query>
+
+
+
+
+</Querys>
