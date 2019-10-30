@@ -1,4 +1,4 @@
-# SchoolInformationManagementSystem
+# Online School Information Management System
 
 This is my second year web project using java JSP Pages and Servlets.
 This is an Online School Information Management System with facilities of 
